@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script>$("#phone").mask("+38(999) 999-9999");</script>
+</head>
+<body>
+    <form method="post" action="" enctype="multipart/form-data" oninput="all.value=parseInt(zp.value)+parseInt(pr.value); numb.value=number.value">
+        <input type="text" id="phone">
+        <input type="text" id="credit">
+
+        <fieldset>
+            <legend>Основная инф</legend>
+
+        <label>Введите ваше ФИО
+        <input type="text" placeholder="Инна" required name="name" value="hello" id="name" maxlength="10" ></label><br>
+         <label>Ваш пароль<input type="password" required name="pass" maxlength="15"></label><br>
+         <label>Ваш пол</label>
+         <label><input type="radio" name="sex" value="M">M</label>
+         <label><input type="radio" name="sex" value="Zh">Zh</label><br>
+        </fieldset>
+         <label>ваше любимое животное</label>
+         <input type="chekbox" name="dog" value="1"><label for="dog">собака</label>
+         <label><input type="chekbox" name="cat"id="dog" value="2" >кот</label><br>
+         <label for="photo">your photo</label>
+         <input type="file" name="photo" id="photo" multiple="image/jpeg"><br>
+         <label>ваш город</label>
+         <select name="city" id="city">
+             <option></option>
+             <optgroup label="большие города">
+             <option>житомир</option>
+             <option>киев</option>
+             <option>одесса</option>
+            </optgroup>
+            <optgroup label="маленькие города">
+                <option>бердичев</option>
+             <option>харьков</option>
+            </optgroup>
+         </select><br>
+         <label for="about">о себе</label>
+         <textarea name="about" id="about" placeholder="cool" cols="25" rows="5"></textarea>
+         <label for="color">любимый цвет</label> 
+         <input type="color" name="color" id="color"><br>
+         <label for="dateB">ваше др</label>
+         <input type="month" name="dateB" id="dateB"><br>
+         <input type="text" name="univ" id="univ" list="un">
+         <datalist id="un">
+             <option>мед</option>
+             <option>пед</option>
+             <option>политех</option>
+             <option>жвинау</option>
+         </datalist><br>
+         <label>ваша почта<input type="email" name="email" placeholder="kii@ukr.net"></label><br>
+         <label>ваш возраст<input type="number" name="age" step="10" min="0" max="100"></label><br>
+         <label>ваша зарплата<input type="text" name="zp" id="zp" value="0"></label>
+         <label>премия<input type="text" name="pr" id="pr" value="0"></label><br>
+          <label>Доход:</label>                       
+           <output name="all"></output>грн<br>
+           0<input type="range" id="number" min="0" max="100" name="number">100<br>
+           <output name="numb"></output>
+         <input type="reset" value="очистить">
+         <input type="submit" name="send" value="отправить">
+    </form>
+    
+</body>
+</html>
